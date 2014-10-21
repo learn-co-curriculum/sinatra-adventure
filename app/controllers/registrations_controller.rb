@@ -17,6 +17,12 @@ class RegistrationsController < ApplicationController
   # is a very dumb, single-request registration process.
   # It is the wise adventurer that doesn't overthink the task!
 
+  post '/register' do
+    session[:email] = params[:email]
+
+    redirect 'new'
+  end
+
 
   get '/new' do
     throw Unauthorized unless user_registered?
@@ -31,7 +37,10 @@ class RegistrationsController < ApplicationController
     # and render a template that will tell them they
     # have completed their quest
 
+    @email = session[:email]
+
     # TODO: render the new user template and see what it says.
+    erb :new_user
   end
   # Bonus experience! The throw above makes an ugly error page happen.
   # Can you check for the same condition, but send them back to
@@ -41,7 +50,8 @@ class RegistrationsController < ApplicationController
   def user_registered?
     # TODO: you'll need a way for your registration to set a value that
     # will make this true when your /new looks at it.
-    false
+    # => was initally set to false
+    session[:email]
   end
 
 end
