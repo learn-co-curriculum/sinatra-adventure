@@ -4,6 +4,7 @@ class ApplicationController < Sinatra::Base
   set :sessions, true
 
   set :sessions, true
+  set :session_secret, "My session secret"
 
   configure :development do
     register Sinatra::Reloader
