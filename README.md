@@ -25,4 +25,4 @@ edit most of the files inside of app/.
 ## Resources
 * [StackOverflow](http://stackoverflow.com/) - [What is a very simple authentication scheme for Sinatra/Rack](http://stackoverflow.com/questions/3559824/what-is-a-very-simple-authentication-scheme-for-sinatra-rack)
 
-<a href='https://learn.co/lessons/sinatra-adventure' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-adventure' title='Sinatra XYZZY'>Sinatra XYZZY</a> on Learn.co and start learning to code for free.</p>
